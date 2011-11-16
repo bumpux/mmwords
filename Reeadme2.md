@@ -4,3 +4,5 @@ and am now editing this new page. Planning to commit / sync in the MAc client.
 Now.
 
 (then I'll check the site to see if anything really changed)
+
+On the site now in the funky terminal-style editor. 
