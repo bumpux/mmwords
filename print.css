@@ -1,0 +1,24 @@
+* {
+	font-family: Gill Sans, Calibri, sans-serif;
+}
+
+textarea, input, #notes-button-bar {
+    display: none;
+}
+
+#notes-preview { 
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;	/* other elements around heading should carry margins that
+				   will suffice. but we can further develop this idea below. */
+	padding: 0;
+}
+
+h1+*,h2+*,h3+*,h4+*,h5+*,h6+* { 
+	margin-top: 0.25em;	/* gap between heading and following content shouldn't 
+						   be as big as the gap above the heading to provide a
+						   visual connection between heading and its related
+						   content  via Ruthsarian simplify layout*/
+}

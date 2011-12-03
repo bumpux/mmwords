@@ -1552,3 +1552,4 @@ Showdown.converter = function () {
 	};
 
 }; // end of Attacklab.showdown.converter
+

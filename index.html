@@ -1,0 +1,40 @@
+<html>
+  <head><meta charset="UTF-8">
+    <!--<title>Mark My Words</title> commented so declaring it in Markdown works-->       
+    <link rel="stylesheet" type="text/css" media="screen" href="wmd.css"/>
+    <script type="text/javascript" src="wmd.js"></script>
+    <script type="text/javascript" src="showdown.js"></script>
+    <link rel="stylesheet" type="text/css" media="print" href="print.css">
+  </head>
+  <body>
+<!--    <h1>Mark My Words</h1>-->
+    <div style="float:left; width: 430px">
+      <div id="notes-button-bar"></div>
+      <textarea id="notes" name="copy">
+<!--markdown--> 
+
+Mark My Words <title> Mark My Words </title>
+======================
+
+Select everything in the text box, delete, and start writing your own WMD-style markdown.
+
+Take a [look at an example](example.html) ...
+
+      </textarea>
+      <input type="text" name="copy_html" value="" id="copy_html" style="height:30px"/>
+    </div>
+    <div>  
+      <div id="notes-preview"></div>
+      </div>
+    <div style="clear:both">&nbsp;</div>
+    <script type="text/javascript">
+      setup_wmd({
+        input: "notes",
+        button_bar: "notes-button-bar",
+        preview: "notes-preview",
+        output: "copy_html"
+      });
+    </script>
+  </body>
+</html>
+

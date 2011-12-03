@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <!--<title>Mark My Words</title> commented so declaring it in Markdown works-->       
+    <link rel="stylesheet" type="text/css" media="screen" href="wmd.css"/>
+    <script type="text/javascript" src="wmd.js"></script>
+    <script type="text/javascript" src="showdown.js"></script>
+    <link rel="stylesheet" type="text/css" media="print" href="print.css">
+  </head>
+  <body>
+<!--    <h1>Mark My Words</h1>-->
+    <div style="float:left; width: 430px">
+      <div id="notes-button-bar"></div>
+      <textarea id="notes" name="copy">
+##Look what I can do
+
+Apart from the excellent [standard Markdown] [1] stuff ...
+
+We'll change two hyphens into an em dash--on the fly. This sentence ends with a real ellipsis, although I only typed three dots ...
+
+Copyright (c), Trademark (tm), Registered (r) are no problem.
+
+^^this text is superscripted^^ -- but this is not.
+
+,,this text is subscripted,, -- but this is not.
+
+~~this text is struck out~~ -- but this is not.
+
+->look, I am right-aligned
+
+->and I am center-aligned <-
+
+Here is an image:
+![alt text][2]
+
+Naturally you can include any [UTF-8 symbols][3] you like. But you can also use other symbols that may or may not always render on every device/OS. If the character you like is not in UTF-8, try searching for [Unicode characters][4]. See ./unicode.md for a bunch of samples. Drag it into the markdown textarea pane.
+
+The small **GUI toolbar in WMD** is useful too. It eases the pain of working in a browser textarea rather than a real editor by giving you buttons for indentation where a tab key wouldn't work. Also very nice is the insert link button on the toolbar, which makes adding Markdown links really simple. It reindexes the links each time you add one and lists them at the bottom. Very clean and nice. Now if it would only handle the footnotes in PHP Markdown Extra...
+
+##Form Inputs
+
+### Text fields
+
+Frog = ___
+
+### Radio buttons
+
+sex = (x) male () female
+
+### Check boxes
+
+phones = [] Android [x] iPhone [x] Blackberry
+
+### Drop down
+
+city = {BOS, SFO, (NYC)}
+
+Required fields
+
+zip code* = ___
+
+All this builds on and extends the [original syntax of Markdown][5]. It does not render some of the things--tables, fenced code blocks, footnotes, etc--that [PHP Markdown Extra][6] does (the Markdown version used by [Stacey][7]).
+
+See also: ./unicode.md for special characters 
+
+[1]: !http://daringfireball.net/projects/markdown/syntax "New window URL. Notice that this URL in Markdown begins with an exclamation! mark. This makes it open in a new window."
+[2]: http://contextural.com/commons/images/qr-codes/qr.email-160.gif "email me!"
+[3]: http://utf8-characters.com/search/ "Search for UTF-8 characters"
+[4]: http://www.fileformat.info/info/unicode/char/search.htm
+[5]: !http://daringfireball.net/projects/markdown/syntax "New window URL. Notice that this URL in Markdown begins with an exclamation! mark. This makes it open in a new window."
+[6]: http://michelf.com/projects/php-markdown/extra/ "PHP Markdown Extra"
+[7]: http://staceyapp.com/documentation/creating-pages/editing-content/ "Editing Content in Stacey"
+</textarea>
+      <input type="text" name="copy_html" value="" id="copy_html" style="height:30px"/>
+    </div>
+    <div>  
+      <div id="notes-preview"></div>
+      </div>
+    <div style="clear:both">&nbsp;</div>
+    <script type="text/javascript">
+      setup_wmd({
+        input: "notes",
+        button_bar: "notes-button-bar",
+        preview: "notes-preview",
+        output: "copy_html"
+      });
+    </script>
+  </body>
+</html>
+
